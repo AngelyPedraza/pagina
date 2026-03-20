@@ -1,144 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Leyes de Ohm y Watt</title>
+    <meta charset="UTF-8">
+    <title>Leyes de Ohm y Watt</title>
 
-<style>
-.btn-volver{
-.btn-volver {
-    position: absolute;
-    top: 20px;          
-    left: 270px;        
-    
-    display: inline-block;
-    padding: 6px 15px;          
-    background: #e9d5ff;        
-    color: black;              
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    z-index: 1000;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
 
-.btn-volver:hover{
-    background:#d8b4fe;        
-}
+        .menu {
+            width: 250px;
+            background: #c084fc;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
 
-body{
-    font-family: Arial;
-    margin:0;
-    display:flex;
-}
+        .menu h2 {
+            text-align: center;
+            color: white;
+        }
 
-.menu{
-    width:250px;
-    background:#c084fc;
-    color:pink;
-    padding:20px;
-    height:100vh;
-    position:fixed;
-}
+        .menu a {
+            display: block;
+            color: #ffe4e6; 
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
 
-.menu h2{
-    text-align:center;
-}
+        .menu a:hover {
+            background: #a855f7;
+        }
 
-.menu a{
-    display:block;
-    color:pink;
-    text-decoration:none;
-    padding:10px;
-    margin:5px 0;
-}
+        .contenido {
+            margin-left: 290px;
+            padding: 30px;
+            width: 100%;
+        }
 
-.menu a:hover{
-    background:#34495e;
-}
+        .btn-volver {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #e9d5ff;
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #c084fc;
+            cursor: pointer;
+        }
 
-.contenido{
-    margin-left:270px;
-    padding:30px;
-}
+        .btn-volver:hover {
+            background: #d8b4fe;
+        }
 
-section{
-    margin-bottom:50px;
-}
-
-</style>
+        section {
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="menu">
-<h2>Índice</h2>
+    <div class="menu">
+        <h2>Índice</h2>
+        <a href="#introduccion">Introducción</a>
+        <a href="#ohm">Ley de Ohm</a>
+        <a href="#caracteristicasOhm">Características Ley de Ohm</a>
+        <a href="#watt">Ley de Watt</a>
+        <a href="#caracteristicasWatt">Características Ley de Watt</a>
+    </div>
 
-<a href="#introduccion">Introducción</a>
-<a href="#ohm">Ley de Ohm</a>
-<a href="#caracteristicasOhm">Características Ley de Ohm</a>
-<a href="#watt">Ley de Watt</a>
-<a href="#caracteristicasWatt">Caracteristicas Ley de Watt</a>
+    <div class="contenido">
+        <a href="https://jarudev.github.io/itcts4z/" class="btn-volver">← Volver a la lista</a>
 
-</div>
+        <section id="introduccion">
+            <h1>Investigación: Leyes de Ohm y Watt</h1>
+            <p>
+                Las leyes de Ohm y Watt son principios fundamentales de la electricidad
+                que permiten comprender cómo funcionan los circuitos eléctricos y cómo se
+                relacionan el voltaje, la corriente, la resistencia y la potencia.
+            </p>
+        </section>
 
-<div class="contenido">
+        <section id="ohm">
+            <h2>Ley de Ohm</h2>
+            <p>
+                La Ley de Ohm establece la relación entre el voltaje, la corriente y la
+                resistencia en un circuito eléctrico. Fue formulada por el físico alemán
+                Georg Simon Ohm.
+            </p>
+            <p><b>Fórmula:</b> V = I × R</p>
+        </section>
 
-<button onclick="window.top.location.href='https://jarudev.github.io/itcts4z/';" class="btn-volver">
-    Volver
-</button>
+        <section id="caracteristicasOhm">
+            <h2>Características de la Ley de Ohm</h2>
+            <ul>
+                <li>Relaciona voltaje, corriente y resistencia.</li>
+                <li>Se usa para analizar circuitos eléctricos.</li>
+                <li>Permite calcular valores desconocidos.</li>
+                <li>Es una ley fundamental en electrónica.</li>
+            </ul>
+        </section>
 
-<section id="introduccion">
-<h1>Investigación: Leyes de Ohm y Watt</h1>
-<p>
-Las leyes de Ohm y Watt son principios fundamentales de la electricidad
-que permiten comprender cómo funcionan los circuitos electricos y cómo se
-relacionan el voltaje, la corriente, la resistencia y la potencia.
-</p>
-</section>
+        <section id="watt">
+            <h2>Ley de Watt</h2>
+            <p>
+                La Ley de Watt establece la relación entre la potencia eléctrica,
+                el voltaje y la corriente dentro de un circuito.
+            </p>
+            <p><b>Fórmula:</b> P = V × I</p>
+        </section>
 
-<section id="ohm">
-<h2>Ley de Ohm</h2>
-<p>
-La Ley de Ohm establece la relacion entre el voltaje, la corriente y la
-resistencia en un circuito eléctrico. Fue formulada por el fisico aleman
-Georg Simon Ohm.
-</p>
-
-<p><b>Fórmula:</b> V = I × R</p>
-</section>
-
-<section id="caracteristicasOhm">
-<h2>Características de la Ley de Ohm</h2>
-<ul>
-<li>Relaciona voltaje, corriente y resistencia.</li>
-<li>Se usa para analizar circuitos eléctricos.</li>
-<li>Permite calcular valores desconocidos.</li>
-<li>Es una ley fundamental en electrónica.</li>
-</ul>
-</section>
-
-<section id="watt">
-<h2>Ley de Watt</h2>
-<p>
-La Ley de Watt establece la relación entre la potencia eléctrica,
-el voltaje y la corriente dentro de un circuito.
-</p>
-
-<p><b>Fórmula:</b> P = V × I</p>
-</section>
-    
-<section id="caracteristicasWatt">
-<h2>Características de la Ley de Watt</h2>
-<ul>
-<li>Permite calcular la potencia electrica.</li>
-<li>Se usa para medir el consumo de energia.</li>
-<li>Relaciona voltaje y corriente.</li>
-<li>Se aplica en dispositivos electricos.</li>
-</ul>
-</section>
-
-</div>
+        <section id="caracteristicasWatt">
+            <h2>Características de la Ley de Watt</h2>
+            <ul>
+                <li>Permite calcular la potencia eléctrica.</li>
+                <li>Se usa para medir el consumo de energía.</li>
+                <li>Relaciona voltaje y corriente.</li>
+                <li>Se aplica en dispositivos eléctricos.</li>
+            </ul>
+        </section>
+    </div>
 
 </body>
 </html>
