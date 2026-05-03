@@ -1,155 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Leyes de Ohm, Watt y Joule</title>
+    <meta charset="UTF-8">
+    <title>Leyes de Ohm y Watt</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-        }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
 
-        .menu {
-            width: 250px;
-            background: #c084fc;
-            color: white;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-        }
+        .menu {
+            width: 250px;
+            background: #c084fc;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
 
-        .menu h2 {
-            text-align: center;
-            color: white;
-        }
+        .menu h2 {
+            text-align: center;
+            color: white;
+        }
 
-        .menu a {
-            display: block;
-            color: #ffe4e6; 
-            text-decoration: none;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 4px;
-        }
+        .menu a {
+            display: block;
+            color: #ffe4e6; 
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
 
-        .menu a:hover {
-            background: #a855f7;
-        }
+        .menu a:hover {
+            background: #a855f7;
+        }
 
-        .contenido {
-            margin-left: 290px;
-            padding: 30px;
-            width: 100%;
-        }
+        .contenido {
+            margin-left: 290px;
+            padding: 30px;
+            width: 100%;
+        }
 
-        .btn-volver {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #e9d5ff;
-            color: black;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border: 1px solid #c084fc;
-            cursor: pointer;
-        }
+        .btn-volver {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #e9d5ff;
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #c084fc;
+            cursor: pointer;
+        }
 
-        .btn-volver:hover {
-            background: #d8b4fe;
-        }
+        .btn-volver:hover {
+            background: #d8b4fe;
+        }
 
-        section {
-            margin-bottom: 50px;
-        }
-    </style>
+        section {
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- MENÚ ÚNICO: Todos los enlaces aquí -->
-    <div class="menu">
-        <h2>Índice</h2>
-        <a href="#introduccion">Introducción</a>
-        <a href="#ohm">Ley de Ohm</a>
-        <a href="#caracteristicasOhm">Características Ley de Ohm</a>
-        <a href="#watt">Ley de Watt</a>
-        <a href="#caracteristicasWatt">Características Ley de Watt</a>
-        <a href="#joule">Ley de Joule</a>
-    </div>
+    <div class="menu">
+        <h2>Índice</h2>
+        <a href="#introduccion">Introducción</a>
+        <a href="#ohm">Ley de Ohm</a>
+        <a href="#caracteristicasOhm">Características Ley de Ohm</a>
+        <a href="#watt">Ley de Watt</a>
+        <a href="#caracteristicasWatt">Características Ley de Watt</a>
+    </div>
+    
+    <div>
+        <a href="#joule">Ley de Joule</a>
+        <a href="#caracteristicasJoule">Características Ley de Joule</a>
+    </div>
 
-    <!-- CONTENIDO ÚNICO: Todo el texto aquí -->
-    <div class="contenido">
-        <a href="https://jarudev.github.io/itcts4z/" class="btn-volver">← Volver a la lista</a>
+    <div class="contenido">
+        <a href="https://jarudev.github.io/itcts4z/" class="btn-volver">← Volver a la lista</a>
 
-        <section id="introduccion">
-            <h1>Investigación: Leyes de Ohm, Watt y Joule</h1>
-            <p>
-                Las leyes de Ohm, Watt y Joule son principios fundamentales de la electricidad
-                que permiten comprender cómo funcionan los circuitos eléctricos y cómo se
-                relacionan el voltaje, la corriente, la resistencia, la potencia y el calor.
-            </p>
-        </section>
+        <section id="introduccion">
+            <h1>Investigación: Leyes de Ohm y Watt</h1>
+            <p>
+                Las leyes de Ohm y Watt son principios fundamentales de la electricidad
+                que permiten comprender cómo funcionan los circuitos eléctricos y cómo se
+                relacionan el voltaje, la corriente, la resistencia y la potencia.
+            </p>
+        </section>
 
-        <section id="ohm">
-            <h2>Ley de Ohm</h2>
-            <p>
-                La Ley de Ohm establece la relación entre el voltaje, la corriente y la
-                resistencia en un circuito eléctrico. Fue formulada por el físico alemán
-                Georg Simon Ohm.
-            </p>
-            <p><b>Fórmula:</b> V = I × R</p>
-        </section>
+        <section id="ohm">
+            <h2>Ley de Ohm</h2>
+            <p>
+                La Ley de Ohm establece la relación entre el voltaje, la corriente y la
+                resistencia en un circuito eléctrico. Fue formulada por el físico alemán
+                Georg Simon Ohm.
+            </p>
+            <p><b>Fórmula:</b> V = I × R</p>
+        </section>
 
-        <section id="caracteristicasOhm">
-            <h2>Características de la Ley de Ohm</h2>
-            <ul>
-                <li>Relaciona voltaje, corriente y resistencia.</li>
-                <li>Se usa para analizar circuitos eléctricos.</li>
-                <li>Permite calcular valores desconocidos.</li>
-                <li>Es una ley fundamental en electrónica.</li>
-            </ul>
-        </section>
+        <section id="caracteristicasOhm">
+            <h2>Características de la Ley de Ohm</h2>
+            <ul>
+                <li>Relaciona voltaje, corriente y resistencia.</li>
+                <li>Se usa para analizar circuitos eléctricos.</li>
+                <li>Permite calcular valores desconocidos.</li>
+                <li>Es una ley fundamental en electrónica.</li>
+            </ul>
+        </section>
 
-        <section id="watt">
-            <h2>Ley de Watt</h2>
-            <p>
-                La Ley de Watt establece la relación entre la potencia eléctrica,
-                el voltaje y la corriente dentro de un circuito.
-            </p>
-            <p><b>Fórmula:</b> P = V × I</p>
-        </section>
+        <section id="watt">
+            <h2>Ley de Watt</h2>
+            <p>
+                La Ley de Watt establece la relación entre la potencia eléctrica,
+                el voltaje y la corriente dentro de un circuito.
+            </p>
+            <p><b>Fórmula:</b> P = V × I</p>
+        </section>
 
-        <section id="caracteristicasWatt">
-            <h2>Características de la Ley de Watt</h2>
-            <ul>
-                <li>Permite calcular la potencia eléctrica.</li>
-                <li>Se usa para medir el consumo de energía.</li>
-                <li>Relaciona voltaje y corriente.</li>
-                <li>Se aplica en dispositivos eléctricos.</li>
-            </ul>
-        </section>
-
-        <section id="joule">
-            <h2>Ley de Joule</h2>
-            <p>
-                La Ley de Joule establece que la cantidad de calor generada por un conductor 
-                es directamente proporcional al cuadrado de la corriente, a la resistencia y al tiempo.
-            </p>
-            <p><b>Fórmula:</b> P = I² × R</p>
-            <ul>
-                <li>Explica la transformación de energía eléctrica en calor.</li>
-                <li>Es la base de funcionamiento de electrodomésticos térmicos.</li>
-                <li>Fundamental para el diseño de sistemas de seguridad y enfriamiento.</li>
-                <li>Permite calcular las pérdidas de energía por calor en un circuito.</li>
-            </ul>
-        </section>
-
-    </div> <!-- Cierre único de contenido -->
-
+        <section id="caracteristicasWatt">
+            <h2>Características de la Ley de Watt</h2>
+            <ul>
+                <li>Permite calcular la potencia eléctrica.</li>
+                <li>Se usa para medir el consumo de energía.</li>
+                <li>Relaciona voltaje y corriente.</li>
+                <li>Se aplica en dispositivos eléctricos.</li>
+            </ul>
+        </section>
+  
+    <section id="joule">
+            <h2>Ley de Joule</h2>
+            <p>
+                La Ley de Joule establece que la cantidad de calor generada por un conductor 
+                es directamente proporcional al cuadrado de la corriente, a la resistencia y al tiempo.
+            </p>
+            <p><b>Fórmula:</b> P = I² × R</p>
+            <ul>
+                <li>Explica la transformación de energía eléctrica en calor.</li>
+                <li>Es la base de funcionamiento de electrodomésticos térmicos.</li>
+                <li>Fundamental para el diseño de sistemas de seguridad y enfriamiento.</li>
+                <li>Permite calcular las pérdidas de energía por calor en un circuito.</li>
+            </ul>
+        </section>
+    </div>
+    
 </body>
 </html>
