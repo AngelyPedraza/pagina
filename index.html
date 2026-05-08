@@ -5,95 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Electricidad - Índice</title>
     <style>
-        :root {
-            --rosa: #ffb6c1;
-            --rosa-oscuro: #ff69b4;
-            --lila: #e0d1ff;
-            --lila-oscuro: #6a4c93;
-            --gris-suave: #f0f0f0;
-        }
+        <style>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fdfbff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+:root{
+    --rosa1:#ffd6e7;
+    --rosa2:#ffb6d9;
+    --rosa3:#ff8fc4;
+    --rosa4:#ff5fa2;
+    --crema:#fff8fc;
+    --texto:#7a3b5c;
+}
 
-        .contenedor-indice {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            border: 2px solid var(--lila);
-        }
+body{
+    font-family:'Courier New', monospace;
+    background:
+    radial-gradient(circle at top,#ffeaf4,#ffd6e7,#fff8fc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+    overflow:hidden;
+}
 
-        h1 {
-            color: var(--lila-oscuro);
-            margin-bottom: 10px;
-        }
+/* ✨ BRILLITOS */
 
-        .menu-opciones {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
+body::before{
+    content:"✦ ✧ ✦ ✧ ✦";
+    position:absolute;
+    top:20px;
+    left:30px;
+    font-size:30px;
+    color:#ffffff90;
+    animation:flotar 4s infinite alternate;
+}
 
-        .opcion-card {
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid transparent;
-        }
+body::after{
+    content:"♡ ♡ ♡";
+    position:absolute;
+    bottom:30px;
+    right:40px;
+    font-size:35px;
+    color:#ff9fc8;
+    animation:flotar 5s infinite alternate;
+}
 
-        .opcion-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+@keyframes flotar{
+    from{
+        transform:translateY(0px);
+    }
 
+    to{
+        transform:translateY(-10px);
+    }
+}
 
-        .btn-leyes {
-            background-color: var(--rosa);
-            color: white;
-            border-color: var(--rosa-oscuro);
-        }
+/* 🌸 CONTENEDOR */
 
-        .btn-taller {
-            background-color: var(--lila);
-            color: var(--lila-oscuro);
-            border-color: var(--lila-oscuro);
-        }
+.contenedor-indice{
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    padding:45px;
+    border-radius:35px;
+    box-shadow:
+    0 0 25px rgba(255,182,217,0.5),
+    0 0 60px rgba(255,182,217,0.2);
 
-        .btn-externo {
-            background-color: var(--gris-suave);
-            color: #555;
-            border-color: #ccc;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
+    text-align:center;
+    max-width:550px;
+    width:90%;
 
-        .btn-externo:hover {
-            background-color: #e0e0e0;
-        }
+    border:4px solid #fff0f6;
+}
 
-        footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #bbb;
-        }
+/* 🌸 TITULO */
+
+h1{
+    color:var(--rosa4);
+    margin-bottom:10px;
+    font-size:42px;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ffb6d9;
+}
+
+p{
+    color:var(--texto);
+    font-size:18px;
+}
+
+/* 🌸 BOTONES */
+
+.menu-opciones{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:30px;
+}
+
+.opcion-card{
+    text-decoration:none;
+    padding:20px;
+    border-radius:20px;
+    font-weight:bold;
+    font-size:1rem;
+    transition:0.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:3px solid #fff;
+    position:relative;
+    overflow:hidden;
+}
+
+/* ✨ EFECTO BRILLO */
+
+.opcion-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+    );
+
+    transition:0.6s;
+}
+
+.opcion-card:hover::before{
+    left:100%;
+}
+
+.opcion-card:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+/* 🌸 BOTONES INDIVIDUALES */
+
+.btn-leyes{
+    background:linear-gradient(90deg,#ffd6e7,#ffb6d9);
+    color:#8a3d63;
+    box-shadow:0 0 15px rgba(255,182,217,0.5);
+}
+
+.btn-leyes:hover{
+    background:linear-gradient(90deg,#ffb6d9,#ff8fc4);
+}
+
+.btn-taller{
+    background:linear-gradient(90deg,#ffe5f1,#ffd6e7);
+    color:#94486e;
+    box-shadow:0 0 15px rgba(255,200,220,0.5);
+}
+
+.btn-taller:hover{
+    background:linear-gradient(90deg,#ffd6e7,#ffb6d9);
+}
+
+.btn-externo{
+    background:#fff0f6;
+    color:#a14f75;
+    border:2px dashed #ffb6d9;
+    margin-top:15px;
+    font-size:0.9rem;
+}
+
+.btn-externo:hover{
+    background:#ffd6e7;
+}
+
+/* 🌸 FOOTER */
+
+footer{
+    margin-top:35px;
+    font-size:0.9rem;
+    color:#c77aa0;
+}
+
+/* 🌸 LINEA */
+
+hr{
+    border:none;
+    height:2px;
+    background:linear-gradient(
+    90deg,
+    transparent,
+    #ffb6d9,
+    transparent
+    );
+}
+
+</style>
     </style>
 </head>
 <body>
