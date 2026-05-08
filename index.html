@@ -5,67 +5,134 @@
     <title>Leyes de Ohm y Watt</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-        }
+<style>
 
-        .menu {
-            width: 250px;
-            background: #c084fc;
-            color: white;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .menu h2 {
-            text-align: center;
-            color: white;
-        }
+body{
+    font-family:'Courier New', monospace;
+    margin:0;
+    display:flex;
+    background:#ffe4ec;
+    color:#5a2a3a;
+}
 
-        .menu a {
-            display: block;
-            color: #ffe4e6; 
-            text-decoration: none;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 4px;
-        }
+/* ===== MENÚ ===== */
 
-        .menu a:hover {
-            background: #a855f7;
-        }
+.menu{
+    width:260px;
+    background:linear-gradient(180deg,#ff9ec4,#d291ff);
+    color:white;
+    padding:20px;
+    height:100vh;
+    position:fixed;
+    overflow-y:auto;
+    box-shadow:0 0 25px rgba(255,105,180,0.5);
+}
 
-        .contenido {
-            margin-left: 290px;
-            padding: 30px;
-            width: 100%;
-        }
+.menu h2{
+    text-align:center;
+    color:white;
+    font-size:28px;
+    text-shadow:0 0 10px #fff;
+    margin-bottom:25px;
+}
 
-        .btn-volver {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #e9d5ff;
-            color: black;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border: 1px solid #c084fc;
-            cursor: pointer;
-        }
 
-        .btn-volver:hover {
-            background: #d8b4fe;
-        }
 
-        section {
-            margin-bottom: 50px;
-        }
+.menu a{
+    display:block;
+    color:#fff0f6;
+    text-decoration:none;
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+    background:rgba(255,255,255,0.15);
+    border:2px solid rgba(255,255,255,0.3);
+    transition:0.3s;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(255,255,255,0.1);
+}
+
+.menu a:hover{
+    background:#ff6fa5;
+    transform:translateX(5px);
+    box-shadow:0 0 15px #ffb6d9;
+}
+
+
+
+.contenido{
+    margin-left:300px;
+    padding:40px;
+    width:100%;
+}
+
+
+
+.btn-volver{
+    display:inline-block;
+    padding:10px 18px;
+    background:#ffd6ea;
+    color:#5a2a3a;
+    text-decoration:none;
+    border-radius:12px;
+    margin-bottom:30px;
+    font-size:14px;
+    font-weight:bold;
+    border:2px solid #ff9ec4;
+    transition:0.3s;
+}
+
+.btn-volver:hover{
+    background:#ff9ec4;
+    color:white;
+    box-shadow:0 0 15px #ff9ec4;
+}
+
+section{
+    margin-bottom:50px;
+    background:#fff0f7;
+    padding:25px;
+    border-radius:20px;
+    border:3px solid #ffb6d9;
+    box-shadow:0 0 20px rgba(255,182,217,0.4);
+}
+
+
+h1{
+    color:#d63384;
+    font-size:40px;
+    text-shadow:0 0 10px #ffb6d9;
+}
+
+h2{
+    color:#c026d3;
+    font-size:30px;
+}
+
+
+
+p, li{
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+.formula{
+    background:#ffd6ea;
+    padding:12px;
+    border-radius:12px;
+    display:inline-block;
+    font-weight:bold;
+    color:#a21caf;
+    box-shadow:0 0 10px rgba(255,182,217,0.5);
+    margin-top:10px;
+}
+
+</style>
     </style>
 </head>
 
