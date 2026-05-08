@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taller de Electrónica</title>
 
 <style>
@@ -17,19 +18,19 @@ body{
 
 header{
   background-color:#ff9bb3;
-  padding:15px;
+  padding:20px;
   text-align:center;
-  font-size:24px;
+  font-size:28px;
   font-weight:bold;
-  border-bottom:3px solid #ff6f91;
-  box-shadow:0 0 20px rgba(255,105,180,0.3);
+  border-bottom:4px solid #ff6f91;
+  box-shadow:0 0 20px rgba(255,105,180,0.4);
 }
 
 /* NAV */
 
 nav{
   background-color:#ffc1d3;
-  padding:10px;
+  padding:12px;
   text-align:center;
   position:sticky;
   top:0;
@@ -79,19 +80,6 @@ nav a:hover{
 
 section{
   padding:20px;
-  border-bottom:2px dashed #ff9bb3;
-}
-
-h2{
-  color:#d63384;
-}
-
-.card{
-  background-color:#fff0f5;
-  padding:15px;
-  border-radius:12px;
-  box-shadow:2px 2px 8px rgba(0,0,0,0.1);
-  margin-top:10px;
 }
 
 /* MENÚ DESPLEGABLE */
@@ -132,7 +120,11 @@ h2{
   transform:rotate(180deg);
 }
 
-.menu-desplegable .card{
+.card{
+  background-color:#fff0f5;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:2px 2px 10px rgba(0,0,0,0.1);
   animation:aparecer 0.5s ease;
 }
 
@@ -148,14 +140,14 @@ h2{
   }
 }
 
-/* CIRCUITO RETRO */
+/* CIRCUITO */
 
 .circuito-box{
   background:linear-gradient(145deg,#fff0f6,#ffd6e7);
   border:4px solid #ff78aa;
   border-radius:25px;
   padding:25px;
-  margin:20px;
+  margin-top:20px;
   box-shadow:0 0 25px rgba(255,105,180,0.4);
   overflow:hidden;
 }
@@ -197,26 +189,6 @@ svg{
 
 .bombillo{
   animation:brillo 1s infinite alternate;
-}
-
-.info-circuito{
-  margin-top:20px;
-  background:#fff5fa;
-  padding:18px;
-  border-radius:15px;
-  border:2px dashed #ff8eb8;
-  color:#5a2a3a;
-  line-height:1.8;
-}
-
-.azul{
-  color:#4cc9ff;
-  font-weight:bold;
-}
-
-.rojo{
-  color:#ff4f81;
-  font-weight:bold;
 }
 
 @keyframes moverReal{
@@ -272,7 +244,178 @@ svg{
 ← Volver al Portafolio
 </a>
 
-<!-- RESTO DE TU CONTENIDO -->
+<!-- CONCEPTOS -->
+
+<section id="conceptos">
+
+<details class="menu-desplegable" open>
+
+<summary>⚡ Conceptos Fundamentales</summary>
+
+<div class="card">
+
+<h2>Electricidad</h2>
+
+<p>
+La electricidad es una forma de energía producida por el movimiento de electrones.
+</p>
+
+<p><b>Corriente:</b> flujo de electrones.</p>
+<p><b>Voltaje:</b> fuerza que impulsa electrones.</p>
+<p><b>Resistencia:</b> oposición al paso de corriente.</p>
+<p><b>Potencia:</b> energía consumida en un tiempo.</p>
+
+<hr>
+
+<h2>Electrón</h2>
+
+<p>
+El electrón es una partícula subatómica con carga negativa representada como e⁻.
+</p>
+
+<p>
+Cuando conectas un cargador, los electrones transportan energía hacia el celular.
+</p>
+
+</div>
+
+</details>
+
+</section>
+
+<!-- ANÁLISIS -->
+
+<section id="analisis">
+
+<details class="menu-desplegable">
+
+<summary>🧠 Análisis y Reflexión</summary>
+
+<div class="card">
+
+<p>
+Los electrones necesitan energía porque sin voltaje su movimiento es desordenado.
+</p>
+
+<p>
+El sentido convencional ayuda a simplificar el análisis de circuitos.
+</p>
+
+<p>
+La potencia eléctrica se relaciona con el calor porque parte de la energía se transforma en energía térmica.
+</p>
+
+</div>
+
+</details>
+
+</section>
+
+<!-- APLICACIÓN -->
+
+<section id="aplicacion">
+
+<details class="menu-desplegable">
+
+<summary>📱 Aplicación</summary>
+
+<div class="card">
+
+<p>
+El cargador reduce el voltaje de 110V o 220V a aproximadamente 5V.
+</p>
+
+<p>
+Esto evita daños en el celular.
+</p>
+
+<p>
+Cuando el cargador se calienta, parte de la energía eléctrica se transforma en calor.
+</p>
+
+</div>
+
+</details>
+
+</section>
+
+<!-- ACTIVIDAD -->
+
+<section id="actividad">
+
+<details class="menu-desplegable">
+
+<summary>🎀 Actividad y Analogía</summary>
+
+<div class="card">
+
+<p><b>Voltaje:</b> altura del tobogán.</p>
+
+<p><b>Corriente:</b> cantidad de agua que fluye.</p>
+
+<p><b>Resistencia:</b> obstáculos del tobogán.</p>
+
+</div>
+
+</details>
+
+</section>
+
+<!-- CIRCUITO -->
+
+<section id="circuito">
+
+<div class="circuito-box">
+
+<h2 class="circuito-titulo">
+🌸 Circuito Eléctrico Retro 🌸
+</h2>
+
+<svg viewBox="0 0 800 450">
+
+<path class="cable"
+d="M170 100 H620 V320 H170 Z"/>
+
+<path class="real"
+d="M170 100 H620 V320 H170 Z"/>
+
+<path class="conv"
+d="M170 100 H620 V320 H170 Z"/>
+
+<circle cx="620"
+cy="210"
+r="50"
+fill="#ffe066"
+stroke="#fff5a5"
+stroke-width="6"
+class="bombillo"/>
+
+</svg>
+
+<div class="card">
+
+<p>
+🔵 Sentido Real:
+los electrones viajan desde el polo negativo (-)
+hacia el positivo (+).
+</p>
+
+<p>
+🔴 Sentido Convencional:
+la corriente se representa desde el polo positivo (+)
+hacia el negativo (-).
+</p>
+
+<p>
+El bombillo enciende porque la corriente circula
+en un circuito cerrado.
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 </body>
 </html>
