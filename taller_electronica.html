@@ -3,188 +3,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrónica Básica</title>
+    <title>🌸 Electrónica Básica - Dashboard Retro🌸⚡</title>
 
     <style>
-
-        body{
-            font-family: Verdana, sans-serif;
-            background: linear-gradient(135deg, #2d0b45, #5a189a, #ff4fd8);
+      
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fff0f5; /* Lavender Blush */
+            background-image: radial-gradient(#ffb6c1 1px, transparent 1px), radial-gradient(#ffb6c1 1px, #fff0f5 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
             margin: 0;
-            color: white;
+            color: #4a2c40;
+            min-height: 100vh;
+            padding-bottom: 50px;
         }
 
-        header{
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+      
+        .cat-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .pixel-cat {
+            font-size: 3.5rem;
+            animation: bounce 0.6s infinite alternate;
+            user-select: none;
+            letter-spacing: -2px;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-8px); }
+        }
+
+     
+        header {
+            background: #ffe4e1; 
             text-align: center;
-            padding: 25px;
-            border-bottom: 2px solid #ff8df7;
-            box-shadow: 0 0 20px #ff4fd8;
+            padding: 25px 20px;
+            border: 3px solid #ff69b4;
+            box-shadow: 5px 5px 0px #ffb6c1;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 12px;
         }
 
-        header h1{
-            text-shadow: 0 0 10px #ff4fd8,
-                         0 0 20px #ff4fd8,
-                         0 0 30px #b517ff;
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            color: #ff1493;
+            text-shadow: 2px 2px 0px #fff;
         }
 
-        nav{
-            background: rgba(255,255,255,0.08);
+        header p {
+            margin: 0;
+            color: #c71585;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+       
+        nav {
+            background: #fff;
             padding: 15px;
             text-align: center;
-            box-shadow: 0 0 15px #d946ef;
+            border-top: 3px solid #ff69b4;
+            border-bottom: 3px solid #ff69b4;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        nav a{
-            color: white;
+        nav a {
+            color: #ff1493;
             text-decoration: none;
-            margin: 15px;
+            margin: 5px 10px;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border: 2px solid #ffb6c1;
+            background: #fff5f7;
+            display: inline-block;
+            transition: all 0.2s ease;
         }
 
-        nav a:hover{
-            color: #ff8df7;
-            text-shadow: 0 0 10px #ff8df7;
+        nav a:hover {
+            color: #fff;
+            background: #ff69b4;
+            border-color: #ff1493;
+            transform: translate(-2px, -2px);
+            box-shadow: 3px 3px 0px #c71585;
         }
 
-        section{
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(8px);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid #ff8df7;
-            box-shadow: 0 0 20px rgba(255,79,216,0.5);
+
+        .btn-volver {
+            display: inline-block;
+            margin: 20px 0 0 20px;
+            padding: 8px 16px;
+            background: #fff;
+            color: #ff1493;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border: 2px solid #ff69b4;
+            box-shadow: 3px 3px 0px #ffb6c1;
+            transition: all 0.2s ease;
         }
 
-        h2{
-            color: #ffb3ff;
-            text-shadow: 0 0 10px #ff4fd8;
+        .btn-volver:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #ffb6c1;
+            background: #fff5f7;
         }
 
-        h3{
-            color: #e0aaff;
+       
+        section {
+            max-width: 840px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        img{
-            margin-top: 10px;
-            filter: drop-shadow(0 0 10px #ff4fd8);
+        .menu-desplegable {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid #ff69b4;
+            box-shadow: 6px 6px 0px #ffb6c1;
+            margin-bottom: 25px;
         }
 
-        button{
-            background: linear-gradient(45deg, #ff4fd8, #9d4edd);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            margin-top: 10px;
-            border-radius: 25px;
+        .menu-desplegable[open] {
+            border-color: #ff1493;
+            box-shadow: 6px 6px 0px #ff69b4;
+        }
+
+        .menu-desplegable summary {
+            list-style: none;
             cursor: pointer;
+            padding: 18px;
+            font-size: 1.15rem;
             font-weight: bold;
-            box-shadow: 0 0 15px #ff4fd8;
-            transition: 0.3s;
+            color: #c71585;
+            background: #ffe4e1;
+            position: relative;
+            border-bottom: 2px solid #ffb6c1;
+            transition: all 0.2s ease;
         }
 
-        button:hover{
-            transform: scale(1.05);
-            box-shadow: 0 0 25px #ff8df7;
+        .menu-desplegable summary::-webkit-details-marker {
+            display: none;
         }
 
-        p{
+        .menu-desplegable summary:hover {
+            background: #ffd1dc;
+            color: #ff1493;
+        }
+
+        .menu-desplegable summary::after {
+            content: '🌸';
+            position: absolute;
+            right: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-desplegable[open] summary::after {
+            content: '✨';
+            transform: rotate(15deg);
+        }
+     
+        .card {
+            padding: 25px;
+            background: #ffffff;
+            animation: desplazar 0.3s ease-out;
+        }
+
+        @keyframes desplazar {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h3 {
+            color: #ff1493;
+            font-size: 1.3rem;
+            margin-top: 0;
+            border-left: 5px solid #ff69b4;
+            padding-left: 10px;
+        }
+
+        p {
             line-height: 1.6;
+            color: #4a2c40;
+            font-size: 0.95rem;
         }
 
+        strong {
+            color: #ff1493;
+            background-color: #fff0f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            list-style-type: '👉 ';
+        }
+
+        .circuito-container {
+            text-align: center;
+            background: #fff5f7;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 450px;
+            border: 3px dashed #ffb6c1;
+            box-shadow: 4px 4px 0px #ffe4e1;
+        }
+
+        .estado-texto {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #ff1493;
+            margin-bottom: 12px;
+        }
+
+        .cable-corriente {
+            stroke-dasharray: 8;
+            animation: fluir 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes fluir {
+            to { stroke-dashoffset: -16; }
+        }
+
+    
+        .directa .cable-corriente { display: block; }
+        .directa #diodo-relleno { fill: #ff69b4; filter: drop-shadow(0px 0px 8px #ff1493); }
+        #diodo-relleno { fill: #fff; transition: fill 0.3s ease; }
+
+     
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 80%;
+            background: #ffd1dc;
+            height: 8px;
+            border-radius: 4px;
+            outline: none;
+            margin: 10px 0;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff1493;
+            cursor: pointer;
+            border: 2px solid #fff;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+
+        button {
+            background: #ff69b4;
+            color: white;
+            border: 2px solid #ff1493;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 0.85rem;
+            box-shadow: 3px 3px 0px #c71585;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #c71585;
+            background: #ff1493;
+        }
+
+        .btn-switch {
+            background: #fff;
+            color: #ff1493;
+            border: 2px solid #ff69b4;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            box-shadow: 2px 2px 0px #ffb6c1;
+            margin-bottom: 15px;
+        }
+
+      
+        .info-emergente {
+            margin-top: 15px;
+            padding: 12px;
+            background: #fff0f5;
+            border: 2px dotted #ff69b4;
+            border-radius: 6px;
+            display: none;
+            animation: desplazar 0.3s ease;
+            font-size: 0.9rem;
+            color: #c71585;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: #ffb6c1;
+            margin: 20px 0;
+        }
     </style>
 </head>
-<a href="https://angelypedraza.github.io/pagina/" class="btn-volver">
-← Volver al Portafolio
-</a>
-
 <body>
 
-    <header>
-        <h1>⚡ Electrónica Básica ⚡</h1>
+    <div class="cat-container">
+        <div class="pixel-cat">(=•⩊•=)🐾💕</div>
+    </div>
 
-        <p>
-            Proyecto educativo sobre componentes electrónicos
-        </p>
+    <header>
+        <h1>🌸 Electrónica Básica 🌸</h1>
+        <p>🌸 Explorando el control y comportamiento de los componentes semiconductores 🌸</p>
     </header>
 
     <nav>
-        <a href="#unidad1">Unidad 1</a>
-        <a href="#unidad2">Unidad 2</a>
-        <a href="#unidad3">Unidad 3</a>
-        <a href="#unidad4">Unidad 4</a>
+        <a href="#unidad1">🌸 Unidad 1: Diodos</a>
+        <a href="#unidad2">✨ Unidad 2: BJT</a>
+        <a href="#unidad3">🐈‍⬛ Unidad 3: MOSFET</a>
+        <a href="#unidad4">🌸 Unidad 4: TRIAC</a>
     </nav>
 
-    <section id="unidad1">
+    <a href="https://angelypedraza.github.io/pagina/" class="btn-volver">
+        💖 Volver al Portafolio
+    </a>
 
-        <h2>Unidad 1</h2>
+    <section>
 
-        <h3>Diodos</h3>
+        <details class="menu-desplegable" id="unidad1" open>
+            <summary>Unidad 1: Estado Sólido y Diodos 🌸</summary>
+            <div class="card">
+                <h3>El Diodo Semiconductor</h3>
+                <p>
+                    Un <strong>diodo</strong> es un componente electrónico de dos terminales que permite la circulación de la corriente eléctrica a través de él en un solo sentido, bloqueando el paso si la corriente va en dirección contraria.
+                </p>
+                
+                <div class="circuito-container directa" id="miCircuito">
+                    <div class="estado-texto" id="txtEstado">🕹️ Polarización Directa (Fluye Corriente)</div>
+                    <button class="btn-switch" onclick="cambiarPolaridad()">🔄 Cambiar Polaridad</button>
+                    <br>
+                    <svg width="240" height="100" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 20 50 L 90 50 M 150 50 L 220 50" stroke="#dcb7cc" stroke-width="4" stroke-linecap="round"/>
+                        <path class="cable-corriente" d="M 20 50 L 90 50 M 150 50 L 220 50" stroke="#ff1493" stroke-width="4" stroke-linecap="round"/>
+                        <text x="25" y="40" fill="#c71585" font-size="12" font-weight="bold" id="poloIzquierdo">+</text>
+                        <text x="205" y="40" fill="#c71585" font-size="12" font-weight="bold" id="poloDerecho">-</text>
+                        <g transform="translate(45, 10)">
+                            <polygon id="diodo-relleno" points="45,15 75,40 45,65" stroke="#ff1493" stroke-width="3" stroke-linejoin="round"/>
+                            <line x1="75" y1="15" x2="75" y2="65" stroke="#ff1493" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+                
+                <p>Su comportamiento se asemeja al de una válvula de flujo mecánico unidireccional. 🐈‍⬛🐾</p>
+                
+                <button onclick="toggleInfo('info1')">✨ Ver aplicaciones prácticas ✨</button>
+                <div id="info1" class="info-emergente">
+                    🐾 Los diodos rectificadores son esenciales en fuentes de alimentación y cargadores para convertir corriente alterna (AC) en corriente continua (DC).
+                </div>
+            </div>
+        </details>
 
-        <p>
-            Un diodo permite el paso de corriente en una sola dirección.
-        </p>
+        <details class="menu-desplegable" id="unidad2">
+            <summary>Unidad 2: Transistores de Juntura Bipolar 🐈‍⬛</summary>
+            <div class="card">
+                <h3>Transistor BJT (NPN / PNP)</h3>
+                <p>
+                    El <strong>BJT</strong> es un dispositivo controlado por <strong>corriente</strong>. Una pequeña cantidad de corriente en la Base ($I_B$) abre el paso a una corriente mucho mayor entre Colector y Emisor ($I_C$).
+                </p>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diode_symbol.svg" width="100">
+                <div class="circuito-container">
+                    <div class="estado-texto" id="txtBJT">🎛️ Amplificación: Región de Corte (Apagado)</div>
+                    <label style="font-size:0.8rem; font-weight:bold; color:#c71585;">Corriente de Base (Ib): </label>
+                    <input type="range" id="sliderBJT" min="0" max="100" value="0" oninput="simularBJT(this.value)">
+                    <br>
+                    <svg width="240" height="120" viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="100" y1="40" x2="100" y2="80" stroke="#ff1493" stroke-width="5"/> <line x1="60" y1="60" x2="100" y2="60" stroke="#ff1493" stroke-width="3"/> <line x1="100" y1="45" x2="140" y2="20" stroke="#ff1493" stroke-width="3"/> <line x1="100" y1="75" x2="140" y2="100" stroke="#ff1493" stroke-width="3"/> <circle id="focoBJT" cx="180" cy="20" r="15" fill="#fff" stroke="#ff1493" stroke-width="3"/>
+                        <path d="M 172 12 L 188 28 M 188 12 L 172 28" stroke="#ff69b4" stroke-width="2"/>
+                        
+                        <path d="M 140 20 L 165 20 M 195 20 L 220 20" stroke="#dcb7cc" stroke-width="2"/>
+                        
+                        <circle id="electronBJT" cx="120" cy="32" r="4" fill="#ff1493" style="display:none;"/>
+                    </svg>
+                </div>
 
-        <br>
+                <hr>
+                <p><strong>Funciones Principales:</strong></p>
+                <ul>
+                    <li><strong>Región de Corte y Saturación:</strong> Funciona como un interruptor electrónico digital.</li>
+                    <li><strong>Región Activa:</strong> Funciona como un amplificador analógico de señales eléctricas.</li>
+                </ul>
+            </div>
+        </details>
 
-        <button onclick="mostrarInfo()">
-            Ver más información
-        </button>
+        <details class="menu-desplegable" id="unidad3">
+            <summary>Unidad 3: Transistores de Efecto de Campo 🐈‍⬛</summary>
+            <div class="card">
+                <h3>El MOSFET</h3>
+                <p>
+                    El <strong>MOSFET</strong> es un dispositivo controlado por <strong>voltaje</strong> en su Compuerta (Gate). No requiere corriente de entrada, solo un campo eléctrico para crear un canal de conducción.
+                </p>
 
-        <p id="info"></p>
+                <div class="circuito-container">
+                    <div class="estado-texto" id="txtMOSFET">🌸 Voltaje Gate (Vgs): 0V (Canal Cerrado)</div>
+                    <button class="btn-switch" onclick="setVoltajeMOSFET(0)">0V</button>
+                    <button class="btn-switch" onclick="setVoltajeMOSFET(2)">2V</button>
+                    <button class="btn-switch" onclick="setVoltajeMOSFET(5)">5V (Saturación)</button>
+                    <br><br>
+                    <svg width="260" height="100" viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="20" width="140" height="50" fill="#fff" stroke="#ff69b4" stroke-width="3" rx="4"/>
+                        <rect x="70" y="20" width="25" height="20" fill="#ffd1dc"/>
+                        <rect x="165" y="20" width="25" height="20" fill="#ffd1dc"/>
+                        <text x="77" y="34" font-size="10" font-weight="bold" fill="#ff1493">S</text>
+                        <text x="173" y="34" font-size="10" font-weight="bold" fill="#ff1493">D</text>
+                        
+                        <rect id="canalMOSFET" x="95" y="20" width="70" height="0" fill="#ff1493" opacity="0.6"/>
+                        
+                        <line x1="95" y1="10" x2="165" y2="10" stroke="#4a2c40" stroke-width="4"/>
+                        <text x="125" y="7" font-size="10" font-weight="bold" fill="#c71585">Gate</text>
+                    </svg>
+                </div>
 
-    </section>
+                <p>
+                    Su altísima velocidad de conmutación y baja disipación de potencia lo convierten en el bloque de construcción fundamental de los procesadores computacionales modernos. 🚀
+                </p>
+            </div>
+        </details>
 
-    <section id="unidad2">
+        <details class="menu-desplegable" id="unidad4">
+            <summary>Unidad 4: Electrónica de Potencia 🌸</summary>
+            <div class="card">
+                <h3>El TRIAC</h3>
+                <p>
+                    El <strong>TRIAC</strong> funciona como dos interruptores acoplados en direcciones opuestas, lo que le permite controlar y recortar la energía en sistemas de <strong>corriente alterna (AC)</strong> en ambos ciclos de la onda.
+                </p>
 
-        <h2>Unidad 2</h2>
+                <div class="circuito-container">
+                    <div class="estado-texto" id="txtTRIAC">🎚️ Dimmer de Potencia AC: 100% (Paso Total)</div>
+                    <input type="range" id="sliderTRIAC" min="0" max="100" value="100" oninput="simularTRIAC(this.value)">
+                    <br>
+                    <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 10 50 Q 40 -10 70 50 T 130 50 Q 160 -10 190 50 T 250 50" fill="none" stroke="#dcb7cc" stroke-width="3"/>
+                        <path id="ondaAC" d="M 10 50 Q 40 -10 70 50 T 130 50 Q 160 -10 190 50 T 250 50" fill="none" stroke="#ff1493" stroke-width="4"/>
+                        <line x1="10" y1="50" x2="250" y2="50" stroke="#4a2c40" stroke-width="1" stroke-dasharray="4"/>
+                    </svg>
+                </div>
 
-        <h3>BJT</h3>
-
-        <p>
-            El transistor BJT sirve para amplificar o controlar corriente.
-        </p>
-
-    </section>
-
-    <section id="unidad3">
-
-        <h2>Unidad 3</h2>
-
-        <h3>MOSFET</h3>
-
-        <p>
-            El MOSFET es un transistor usado en electrónica moderna.
-        </p>
-
-    </section>
-
-    <section id="unidad4">
-
-        <h2>Unidad 4</h2>
-
-        <h3>TRIAC</h3>
-
-        <p>
-            El TRIAC se usa para controlar corriente alterna.
-        </p>
+                <p>
+                    Esto lo hace el componente ideal para dimmers de luz del hogar, control de velocidad de taladros, licuadoras y calentadores eléctricos. 🍧
+                </p>
+            </div>
+        </details>
 
     </section>
 
     <script>
-
-        function mostrarInfo(){
-
-            document.getElementById("info").innerHTML =
-            "Los diodos se utilizan en cargadores, televisores y circuitos electrónicos.";
-
+        // LÓGICA UNIDAD 1: DIODO
+        let esDirecta = true;
+        function cambiarPolaridad() {
+            const circuito = document.getElementById('miCircuito');
+            const txtEstado = document.getElementById('txtEstado');
+            const poloIzquierdo = document.getElementById('poloIzquierdo');
+            const poloDerecho = document.getElementById('poloDerecho');
+            esDirecta = !esDirecta;
+            if (esDirecta) {
+                circuito.classList.add('directa');
+                txtEstado.innerHTML = "🕹️ Polarización Directa (Fluye Corriente)";
+                poloIzquierdo.innerHTML = "+";
+                poloDerecho.innerHTML = "-";
+            } else {
+                circuito.classList.remove('directa');
+                txtEstado.innerHTML = "🛑 Polarización Inversa (Corriente Bloqueada)";
+                poloIzquierdo.innerHTML = "-";
+                poloDerecho.innerHTML = "+";
+            }
         }
 
+        // LÓGICA UNIDAD 2: Transistor BJT
+        let bjtInterval;
+        function simularBJT(val) {
+            const txt = document.getElementById('txtBJT');
+            const foco = document.getElementById('focoBJT');
+            const electron = document.getElementById('electronBJT');
+            
+            clearInterval(bjtInterval);
+            
+            if(val == 0) {
+                txt.innerHTML = "🎛️ Amplificación: Región de Corte (Apagado)";
+                foco.style.fill = "#fff";
+                electron.style.display = "none";
+            } else if (val > 0 && val < 85) {
+                txt.innerHTML = `🎛️ Amplificación: Región Activa (Ib = ${val}µA | Ic = ${val*2}mA)`;
+                foco.style.fill = `rgba(255, 20, 147, ${val/100})`;
+                electron.style.display = "block";
+                // Animar el electrón pasando según la corriente
+                let pos = 20;
+                bjtInterval = setInterval(() => {
+                    pos += (val/15);
+                    if(pos > 220) pos = 20;
+                    electron.setAttribute('cx', pos);
+                }, 30);
+            } else {
+                txt.innerHTML = "🎛️ Amplificación: Región de Saturación (Máximo)";
+                foco.style.fill = "#ff1493";
+                foco.style.filter = "drop-shadow(0px 0px 10px #ff1493)";
+                electron.style.display = "block";
+                let pos = 20;
+                bjtInterval = setInterval(() => {
+                    pos += 8;
+                    if(pos > 220) pos = 20;
+                    electron.setAttribute('cx', pos);
+                }, 20);
+            }
+        }
+
+        // LÓGICA UNIDAD 3: MOSFET
+        function setVoltajeMOSFET(v) {
+            const txt = document.getElementById('txtMOSFET');
+            const canal = document.getElementById('canalMOSFET');
+            if(v === 0) {
+                txt.innerHTML = "🌸 Voltaje Gate (Vgs): 0V (Canal Cerrado)";
+                canal.setAttribute('height', '0');
+            } else if (v === 2) {
+                txt.innerHTML = "🌸 Voltaje Gate (Vgs): 2V (Apenas Alcanzando Vth - Conducción Débil)";
+                canal.setAttribute('height', '8');
+                canal.style.fill = "#ffb6c1";
+            } else {
+                txt.innerHTML = "🌸 Voltaje Gate (Vgs): 5V (Canal Totalmente Abierto - Conducción Máxima)";
+                canal.setAttribute('height', '20');
+                canal.style.fill = "#ff1493";
+            }
+        }
+
+        // LÓGICA UNIDAD 4: TRIAC
+        function simularTRIAC(val) {
+            const txt = document.getElementById('txtTRIAC');
+            const onda = document.getElementById('ondaAC');
+            txt.innerHTML = `🎚️ Dimmer de Potencia AC: ${val}%`;
+            
+            // Recorte visual simulado modificando la opacidad o el trazo de la onda
+            let dashoffset = (100 - val) * 2.5;
+            onda.style.strokeDasharray = `300`;
+            onda.style.strokeDashoffset = dashoffset;
+            onda.style.opacity = (val / 100) + 0.1;
+        }
+
+        // MENÚS DESPLEGABLES GENERALES
+        function toggleInfo(id) {
+            const elemento = document.getElementById(id);
+            if (elemento.style.display === "block") {
+                elemento.style.display = "none";
+            } else {
+                elemento.style.display = "block";
+            }
+        }
     </script>
 
 </body>
