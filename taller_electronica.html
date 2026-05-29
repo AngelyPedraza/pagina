@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrónica Básica</title>
+
+    <style>
+
+        body{
+            font-family: Verdana, sans-serif;
+            background: linear-gradient(135deg, #2d0b45, #5a189a, #ff4fd8);
+            margin: 0;
+            color: white;
+        }
+
+        header{
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 25px;
+            border-bottom: 2px solid #ff8df7;
+            box-shadow: 0 0 20px #ff4fd8;
+        }
+
+        header h1{
+            text-shadow: 0 0 10px #ff4fd8,
+                         0 0 20px #ff4fd8,
+                         0 0 30px #b517ff;
+        }
+
+        nav{
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px #d946ef;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            color: #ff8df7;
+            text-shadow: 0 0 10px #ff8df7;
+        }
+
+        section{
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #ff8df7;
+            box-shadow: 0 0 20px rgba(255,79,216,0.5);
+        }
+
+        h2{
+            color: #ffb3ff;
+            text-shadow: 0 0 10px #ff4fd8;
+        }
+
+        h3{
+            color: #e0aaff;
+        }
+
+        img{
+            margin-top: 10px;
+            filter: drop-shadow(0 0 10px #ff4fd8);
+        }
+
+        button{
+            background: linear-gradient(45deg, #ff4fd8, #9d4edd);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 15px #ff4fd8;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #ff8df7;
+        }
+
+        p{
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚡ Electrónica Básica ⚡</h1>
+
+        <p>
+            Proyecto educativo sobre componentes electrónicos
+        </p>
+    </header>
+
+    <nav>
+        <a href="#unidad1">Unidad 1</a>
+        <a href="#unidad2">Unidad 2</a>
+        <a href="#unidad3">Unidad 3</a>
+        <a href="#unidad4">Unidad 4</a>
+    </nav>
+
+    <section id="unidad1">
+
+        <h2>Unidad 1</h2>
+
+        <h3>Diodos</h3>
+
+        <p>
+            Un diodo permite el paso de corriente en una sola dirección.
+        </p>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diode_symbol.svg" width="100">
+
+        <br>
+
+        <button onclick="mostrarInfo()">
+            Ver más información
+        </button>
+
+        <p id="info"></p>
+
+    </section>
+
+    <section id="unidad2">
+
+        <h2>Unidad 2</h2>
+
+        <h3>BJT</h3>
+
+        <p>
+            El transistor BJT sirve para amplificar o controlar corriente.
+        </p>
+
+    </section>
+
+    <section id="unidad3">
+
+        <h2>Unidad 3</h2>
+
+        <h3>MOSFET</h3>
+
+        <p>
+            El MOSFET es un transistor usado en electrónica moderna.
+        </p>
+
+    </section>
+
+    <section id="unidad4">
+
+        <h2>Unidad 4</h2>
+
+        <h3>TRIAC</h3>
+
+        <p>
+            El TRIAC se usa para controlar corriente alterna.
+        </p>
+
+    </section>
+
+    <script>
+
+        function mostrarInfo(){
+
+            document.getElementById("info").innerHTML =
+            "Los diodos se utilizan en cargadores, televisores y circuitos electrónicos.";
+
+        }
+
+    </script>
+
+</body>
+</html>
